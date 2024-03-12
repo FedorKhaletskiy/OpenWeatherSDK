@@ -18,9 +18,9 @@ OpenWeatherAPI SDK has two types of behavior:
 
 ## <a id="title1">Installation</a>
 
-- .NET CLI `dotnet add package FKhaletskiy.SDK.OpenWeatherApiSDK --version 1.0.0 `
-- Package Manager `NuGet\Install-Package FKhaletskiy.SDK.OpenWeatherApiSDK -Version 1.0.0`
-- PackageReference `<PackageReference Include="FKhaletskiy.SDK.OpenWeatherApiSDK" Version="1.0.0" />`
+- .NET CLI `dotnet add package FKhaletskiy.OpenWeatherApiSDK --version 1.0.0`
+- Package Manager `NuGet\Install-Package FKhaletskiy.OpenWeatherApiSDK -Version 1.0.0`
+- PackageReference `<PackageReference Include="FKhaletskiy.OpenWeatherApiSDK" Version="1.0.0" />`
 - Or you can use "Manage NuGet çackages" in the Microsoft Visual Studio UI
 
 ## <a id="title2">Preparation</a>
@@ -32,20 +32,29 @@ OpenWeatherAPI SDK has two types of behavior:
 ## <a id="title3">Usage Example</a>
 
 ```csharp
-// enter your unique API key
+using OpenWeatherSDK;
+using OpenWeatherSDK.Enums;
+
+// Write your API key
 string yourApiKey = "...";
+
+// Names of Cities
+string firstCity = "Buzuluk";
+string secondCity = "Saint-Petersburg";
 
 // Get an instance of the OpenWeatherAPI class by calling the static method GetInstance(unique API key, operating mode)
 OpenWeatherAPI openWeatherAPIonDemand = OpenWeatherAPI.GetInstance(yourApiKey, ModeApi.ForRequest);
 
 // The instance has one unique method, GetCurrentWeatherByCityNameAsync, which takes the city name as an argument and returns a string in JSON format
-string buzulukWeather = await openWeatherAPIonDemand.GetCurrentWeatherByCityNameAsync("Buzuluk");
-Console.WriteLine($"Buzuluk : \n{buzulukWeather}\n");
+string firstkWeather = await openWeatherAPIonDemand.GetCurrentWeatherByCityNameAsync(firstCity);
+Console.WriteLine($"{firstCity} : \n{firstkWeather}\n");
 
 // Get an instance of the OpenWeatherAPI class by calling the static method GetInstance(unique API key, operating mode)
 OpenWeatherAPI openWeatherAPIpolling = OpenWeatherAPI.GetInstance(yourApiKey, ModeApi.Polling);
 
 // The instance has one unique method, GetCurrentWeatherByCityNameAsync, which takes the city name as an argument and returns a string in JSON format
-string spbWeather = await openWeatherAPIpolling.GetCurrentWeatherByCityNameAsync("Saint-Petersburg");
-Console.WriteLine($"Saint-Petersburg : \n{spbWeather}");
+string secondWeather = await openWeatherAPIpolling.GetCurrentWeatherByCityNameAsync(secondCity);
+Console.WriteLine($"{secondCity} : \n{secondWeather}");
+
+Console.ReadLine();
 ```
