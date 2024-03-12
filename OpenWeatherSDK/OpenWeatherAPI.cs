@@ -125,6 +125,7 @@ public class OpenWeatherApi : IOpenWeatherApi, IDisposable
         }
         catch (Exception ex)
         {
+            // hiding stacktrace
             throw ex;
         }
 
@@ -149,6 +150,7 @@ public class OpenWeatherApi : IOpenWeatherApi, IDisposable
             }
             catch (Exception ex)
             {
+                // hiding stacktrace
                 throw ex;
             }
         }
