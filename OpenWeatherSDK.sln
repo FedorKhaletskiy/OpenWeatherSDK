@@ -5,14 +5,15 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenWeatherSDK", "OpenWeatherSDK\OpenWeatherSDK.csproj", "{FB743F1A-9229-4F3B-9DB1-7E99D857E4DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenWeatherExample", "OpenWeatherExample\OpenWeatherExample.csproj", "{2F05435F-7491-4C5B-8456-69AB17058678}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenWeatherExample", "OpenWeatherExample\OpenWeatherExample.csproj", "{2F05435F-7491-4C5B-8456-69AB17058678}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AC993A4D-FB3B-4C23-AE98-6B0BE66E8FFC}"
 	ProjectSection(SolutionItems) = preProject
+		OpenWeatherSDK\NugetPackAndPush.bat = OpenWeatherSDK\NugetPackAndPush.bat
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenWeatherSDK.Tests", "OpenWeatherSDK.Tests\OpenWeatherSDK.Tests.csproj", "{22E34FEA-0D85-4D7F-84D3-B33F05D31CAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenWeatherSDK.Tests", "OpenWeatherSDK.Tests\OpenWeatherSDK.Tests.csproj", "{22E34FEA-0D85-4D7F-84D3-B33F05D31CAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
