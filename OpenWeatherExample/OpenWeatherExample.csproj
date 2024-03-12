@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FKhaletskiy.SDK.OpenWeatherApiSDK" Version="1.0.0" />
+    <PackageReference Include="FKhaletskiy.OpenWeatherApiSDK" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
